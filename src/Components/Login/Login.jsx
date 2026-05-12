@@ -91,7 +91,6 @@ const Login = () => {
                 />
               </div>
               {/* Input field for password */}
-              // write logic code for password input box
               <div className="form-group">
                <label htmlFor="password">Password</label>
                <input
