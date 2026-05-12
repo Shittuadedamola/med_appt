@@ -4,6 +4,8 @@ const http = require('http');
 const connectToMongo = require('./db');
 const app = express();
 
+app.use(cors());
+
 
 app.set('view engine','ejs')
 app.use(express.static('public'))
@@ -13,7 +15,7 @@ const PORT = process.env.PORT || 8181;
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+// app.use(cors());
 
 // Connect to MongoDB
 connectToMongo();

@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import './Sign_Up.css'
 import { Link, useNavigate } from 'react-router-dom';
-import { API_URL } from '../../../config';
+import { API_URL } from '../../config';
 
 // Function component for Sign Up form
 const Sign_Up = () => {
@@ -67,6 +67,30 @@ const Sign_Up = () => {
                             {showerr && <div className="err" style={{ color: 'red' }}>{showerr}</div>}
                         </div>
                         {/* Apply similar logic for other form elements like name, phone, and password to capture user information */}
+                        <div className="form-group">
+           <label htmlFor="name">Name</label>
+           <input value={name} type="text" onChange={(e) => setName(e.target.value)} name="name" id="name" className="form-control" placeholder="Enter your name" aria-describedby="helpId" />
+       </div>
+       <div className="form-group">
+           <label htmlFor="phone">Phone</label>
+           <input value={phone} onChange={(e) => setPhone(e.target.value)} type="tel" name="phone" id="phone" className="form-control" placeholder="Enter your phone number" aria-describedby="helpId" />
+       </div>
+       <div className="form-group">
+           <label htmlFor="password">Password</label>
+           <input value={password} onChange={(e) => setPassword(e.target.value)} type='password' name="password" id="password" className="form-control" placeholder="Enter your password" aria-describedby="helpId" />
+
+       </div>
+       
+       <div className="btn-group">
+    <button type="submit" className="btn btn-primary">
+        Sign Up
+    </button>
+
+    <button type="reset" className="btn btn-danger">
+        Reset
+    </button>
+</div>
+
                     </form>
                 </div>
             </div>
