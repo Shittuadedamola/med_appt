@@ -1,5 +1,6 @@
 import React from 'react';
 import './DoctorCard.css';
+import AppointmentForm from '../AppointmentForm/AppointmentForm';
 
 const DoctorCard = ({
   name = "Dam Ola",
@@ -17,6 +18,12 @@ const DoctorCard = ({
   return (
 
     <div className="doctor-card-container">
+
+<AppointmentForm
+  doctorName={name}
+  doctorSpeciality={speciality}
+  onSubmit={handleFormSubmit}
+/>
 
       {/* Doctor Image */}
       <div className="doctor-card-image-container">
