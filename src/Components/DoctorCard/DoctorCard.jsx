@@ -3,11 +3,11 @@ import './DoctorCard.css';
 import AppointmentForm from '../AppointmentForm/AppointmentForm';
 
 const DoctorCard = ({
-  name = "Dam Ola",
-  speciality = "Dentist",
-  experience = "5",
-  ratings = "*****",
-//   profile,
+  name,
+  speciality,
+  experience,
+  ratings,
+  profile,
   image = "https://www.shutterstock.com/image-illustration/cute-cartoon-doctor-stethoscope-flat-600nw-2660180777.jpg"
 }) => {
 
@@ -65,9 +65,9 @@ const DoctorCard = ({
         </p>
 
         {/* Optional Career Profile */}
-        {/* <p className="doctor-profile">
+        <p className="doctor-profile">
           <strong>Career Profile:</strong> {profile}
-        </p> */}
+        </p>
 
         <div>
             <button className="book-appointment-btn">
