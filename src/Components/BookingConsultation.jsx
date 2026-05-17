@@ -1,11 +1,11 @@
-import DoctorCard from '../DoctorCard/DoctorCard'
-import FindDoctorSearch from '../FindDoctorSearch/FindDoctorSearch'
+import DoctorCard from './DoctorCard/DoctorCard';
+import FindDoctorSearch from './FindDoctorSearch/FindDoctorSearch';
 
 function BookingConsultation() {
     return(
         <div>
               {/* Search Component */}
-      <FindDoctorSearch onSearch={handleSearch}/>
+      <FindDoctorSearch />
 
 {/* Doctor Cards */}
 <DoctorCard
